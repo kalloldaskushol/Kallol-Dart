@@ -1,8 +1,11 @@
+// @author Kallol Das Kushol
+
 //**** Question For Practice 2 ****
 import 'dart:io';
 
 // 1. Write a dart program to check if the number is odd or even.
 void main() {
+  print("Question 1");
   int num = int.parse(stdin.readLineSync()!);
   if (num % 2 == 0) {
     print("$num is even");
@@ -11,14 +14,11 @@ void main() {
   }
 
   // 2. Write a dart program to check whether a character is a vowel or consonant.
+  print("Question 2");
   print("Enter a character:");
   String char = stdin.readLineSync()!;
   if (char.length == 1) {
-    if (char.toLowerCase() == 'a' ||
-        char.toLowerCase() == 'e' ||
-        char.toLowerCase() == 'i' ||
-        char.toLowerCase() == 'o' ||
-        char.toLowerCase() == 'u') {
+    if (char.toLowerCase() == 'a' || char.toLowerCase() == 'e' || char.toLowerCase() == 'i' || char.toLowerCase() == 'o' ||char.toLowerCase() == 'u') {
       print("$char is a vowel");
     } else {
       print("$char is a consonant");
@@ -28,6 +28,7 @@ void main() {
   }
 
   // 3. Write a dart program to check whether a number is positive, negative, or zero.
+    print("Question 3");
   print("Enter a number:");
   int num1 = int.parse(stdin.readLineSync()!);
   if (num1 > 0) {
@@ -39,6 +40,7 @@ void main() {
   }
 
   // 4. Write a dart program to print your name 100 times.
+  print("Question 4");
   print("Enter your name:");
   String name = stdin.readLineSync()!;
   for (int i = 0; i < 100; i++) {
@@ -46,6 +48,7 @@ void main() {
   }
 
   // 5. Write a dart program to calculate the sum of natural numbers.
+  print("Question 5");
   print("Enter a number to calculate sum of natural numbers:");
   int n = int.parse(stdin.readLineSync()!);
   int sum = 0;
@@ -55,6 +58,7 @@ void main() {
   print("Sum of natural numbers up to $n is: $sum");
 
   // 6. Write a dart program to generate multiplication tables of 5.
+  print("Question 6");
   print("Enter a number to generate its multiplication table:");
   int num2 = int.parse(stdin.readLineSync()!);
   print("Multiplication Table of $num2:");
@@ -64,6 +68,7 @@ void main() {
   }
 
   // 7. Write a dart program to generate multiplication tables of 1-9.
+  print("Question 7");
   print("Multiplication Tables of 1-9:");
   for (int i = 1; i <= 9; i++) {
     print("Multiplication Table of $i:");
@@ -74,6 +79,7 @@ void main() {
   }
 
   // 8. Write a dart program to create a simple calculator that performs addition, subtraction, multiplication, and division.
+  print("Question 8");
   print("Enter first number:");
   double num3 = double.parse(stdin.readLineSync()!);
   print("Enter second number:");
@@ -107,6 +113,7 @@ void main() {
   }
 
   // 9. Write a dart program to print 1 to 100 but not 41.
+  print("Question 9");
   print("Numbers from 1 to 100 but not 41:");
   for (int i = 1; i <= 100; i++) {
     if (i == 41) {
