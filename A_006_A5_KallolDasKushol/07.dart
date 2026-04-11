@@ -1,15 +1,52 @@
 // @author Kallol Das Kushol
-// 7. Create a map with name, phone keys and store some values to it. Use where to find all keys that have length 4.
-void main() {
-  Map<String, String> contacts = {
-    "John": "1234567890",
-    "Jane": "0987654321",
-    "Doe": "5555555555",
-    "Smith": "1111111111",
-    "Emily": "2222222222"
-  };
+// 7. Create a simple quiz application using oop that allows users to play and view their score.
 
-  List<String> keysWithLength4 = contacts.keys.where((key) => key.length == 4).toList();
-  print(keysWithLength4);
-  
+import 'dart:io';
+
+class Question {
+  String questionText;
+  String answer;
+
+  Question(this.questionText, this.answer);
+}
+
+class Quiz {
+  List<Question> questions = [];
+  int score = 0;
+
+  void addQuestion(Question question) {
+    questions.add(question);
+  }
+
+  void play() {
+    print("Welcome to the Quiz App!");
+    print("-------------------------");
+
+    for (int i = 0; i < questions.length; i++) {
+      print("\nQuestion ${i + 1}: ${questions[i].questionText}");
+      String userAnswer = stdin.readLineSync()!.trim();
+
+      if (userAnswer.toLowerCase() == questions[i].answer.toLowerCase()) {
+        print("Correct! ✅");
+        score++;
+      } else {
+        print("Wrong ❌");
+        print("Correct answer: ${questions[i].answer}");
+      }
+    }
+
+    print("\nQuiz Finished!");
+    print("Your score is: $score / ${questions.length}");
+  }
+}
+
+void main() {
+  Quiz quiz = Quiz();
+
+  quiz.addQuestion(Question("What is the capital of Bangladesh?", "Dhaka"));
+  quiz.addQuestion(Question("How many days are there in a week?", "7"));
+  quiz.addQuestion(Question("What is the color of grass?", "Green"));
+  quiz.addQuestion(Question("What is 2 + 2?", "4"));
+
+  quiz.play();
 }

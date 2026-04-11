@@ -11,11 +11,29 @@ class Camera {
   int get id => _id;
   String get brand => _brand;
   String get color => _color;
-  
-}
+  double get price => _price;
+  // Setters
+  set id(int id) => _id = id;
+  set brand(String brand) => _brand = brand;
+  set color(String color) => _color = color;
+  set price(double price) => _price = price;
 
-// 6. Create an interface called Bottle and add a method to it called open(). Create a class called CokeBottle and
-// implement the Bottle and print the message "Coke bottle is opened". Add a factory constructor to Bottle and
-// return the object of CokeBottle. Instantiate CokeBottle using the factory constructor and call the open() on the
-// object.
-// 7. Create a simple quiz application using oop that allows users to play and view their score.
+  void display(){
+    print("Camera ID: $_id");
+    print("Camera Brand: $_brand");
+    print("Camera color: $_color");
+    print("Camera Price: $_price");
+  }
+}
+void main() {
+  Camera camera1 = Camera(1, "Canon", "Black", 500.0);
+  Camera camera2 = Camera(2, "Nikon", "Silver", 700.0);
+  Camera camera3 = Camera(3, "Sony", "Red", 600.0);
+
+  List<Camera> cameras = [camera1, camera2, camera3];
+
+  for (Camera camera in cameras) {
+    camera.display();
+    print("-------------");
+  }
+}
