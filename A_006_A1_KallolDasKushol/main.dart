@@ -24,8 +24,8 @@ void main() {
   // 5. Write a program to print a square of a number using user input.
 
   print("Enter a number to find its square:");
-  int num = int.parse(stdin.readLineSync()!);
-  int square = num * num;
+  int? num = int.parse(stdin.readLineSync()!); // ! is used to indicate that the value will not be null.And ? is used to indicate that the value can be null.
+  int? square = num * num;
   print("Square of $num is: $square");
 
   // 6. Write a program to print full name of a from first name and last name using user input.
