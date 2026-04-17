@@ -17,7 +17,7 @@ void main() {
   
   print("Is the user active? (yes/no):");
   String activeInput = stdin.readLineSync()!.toLowerCase();
-  bool isActive = activeInput == 'yes' ? true : false;
+  bool isActive = (activeInput == 'yes') ? true : false;
   
   createUser(name, age, isActive: isActive); // In isActive, we used [isActive: isActive] bcz it is a named parameter and we have to specify the parameter name while calling the function. 
 }

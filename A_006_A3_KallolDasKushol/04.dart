@@ -12,7 +12,7 @@ String generateRandomPassword(int length) {
   String password = "";
   
   for (int i = 0; i < length; i++) {
-    password += chars[random.nextInt(chars.length)];
+    password += chars[random.nextInt(chars.length)]; // random.nextInt(chars.length) generates a random index to select a character from the chars string
   }
   
   return password;
